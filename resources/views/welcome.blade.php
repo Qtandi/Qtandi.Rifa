@@ -11,7 +11,7 @@
 </head>
 <body class="bg-[#122F75]">
     <div class="relative min-h-screen min-w-screen">
-        <livewire:modal />
+        <livewire:formModal />
         <div style="z-index: -1;" class="fixed w-screen h-screen flex overflow-hidden">
             <div class="sm:left-[-5%] sm:top-[-15%] top-[-10%] left-[-10%] sm:size-64 size-32 border sm:border-[20px] border-[10px] aliased border-[#FFC74A] rounded-full left-0 absolute"></div>
             <div class="sm:right-[-5%] sm:bottom-[-15%] right-[-10%] bottom-[-10%] sm:size-64 size-32 border sm:border-[20px] border-[10px] aliased border-[#FFC74A] rounded-full right-0 bottom-0 absolute"></div>
@@ -39,7 +39,7 @@
                     <div class="flex-grow justify-self-end text-end">
                         <div>
                             <i class="text-[#ACABAB] fa-regular fa-calendar px-1"></i>
-                            <span class="text-[#ACABAB]">01/11/2024 18:30</span>
+                            <span class="text-[#ACABAB]">25/12/2024 18:30</span>
                         </div>
                     </div>
                 </div>
@@ -48,11 +48,12 @@
                     <img class="rounded-xl" src="{{ url('/images/tv2.png') }}" alt="Qtandi" />
                 </div>
                 <div class="flex py-3">
-                    <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+                    <livewire:queryModal />
+                    <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2.5 me-2 mb-2">
                         <i class="fa-solid fa-book px-1"></i>
                         Regulamentação
                     </button>
-                    <button id="share" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+                    <button id="share" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2.5 me-2 mb-2">
                         <i class="fa-solid fa-share px-1"></i>
                         Compartilhar
                     </button>
@@ -67,6 +68,7 @@
             </div>
         </div>
     </div>
+    @livewireScripts
 </body>
 <script>
     const shareData = {

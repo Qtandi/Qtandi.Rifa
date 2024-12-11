@@ -8,3 +8,5 @@ Route::get('/', function () {
 });
 
 Route::post('/checkout', [CheckoutController::class, 'realizarCheckout']);
+Route::post('/payment/webhook', [CheckoutController::class, 'listener'])
+    ->withoutMiddleware([\Illuminate\Foundation\Http\Middleware\VerifyCsrfToken::class]);

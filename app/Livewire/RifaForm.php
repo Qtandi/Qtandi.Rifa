@@ -46,4 +46,9 @@ class RifaForm extends Component
         $this->quantity -= 1;
         $this->updatePrice();
     }
+
+    public function finalize()
+    {
+        $this->dispatch('showModal', $this->quantity);
+    }
 }
