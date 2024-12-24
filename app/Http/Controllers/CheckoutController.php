@@ -55,10 +55,13 @@ class CheckoutController extends Controller
             ],
             'notification_urls' => ['http://dev.qtandi.com/payment/webhook'],
             'payment_notification_urls' => ['http://dev.qtandi.com/payment/webhook'],
-            'payment_methods' => [
-                ['type' => 'CREDIT_CARD'],
-                ['type' => 'DEBIT_CARD'],
-                ['type' => 'PIX']
+            "payment_methods" => [
+                [
+                    "type" => "PIX"
+                ],
+                [
+                    "type" => "CREDIT_CARD"
+                ]
             ],
             'soft_descriptor' => 'Qtandi',
             'redirect_url' => 'http://dev.qtandi.com/payment/callback',
